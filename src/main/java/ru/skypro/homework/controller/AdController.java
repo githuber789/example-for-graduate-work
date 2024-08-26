@@ -27,8 +27,8 @@ public class AdController {
     }
 
     @PostMapping()
-    public ResponseEntity<?> createAd(@RequestBody Object properties, @RequestBody String image) {
-        if (adsService.createAd(properties, image)) {
+    public ResponseEntity<?> createAd(@RequestBody CreateOrUpdateAd ad, @RequestBody String image) {
+        if (adsService.createAd(ad, image)) {
             return ResponseEntity.status(HttpStatus.CREATED).build();
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
