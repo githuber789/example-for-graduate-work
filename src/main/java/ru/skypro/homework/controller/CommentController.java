@@ -13,7 +13,6 @@ import ru.skypro.homework.service.CommentService;
 @Slf4j
 @CrossOrigin(value = "http://localhost:3000")
 @RestController
-@RequiredArgsConstructor
 public class CommentController {
     private final CommentService commentService;
 
